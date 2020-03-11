@@ -6,3 +6,7 @@
 hello world
 
 [I'm an inline-style link](https://www.google.com)
+
+```bash
+g++ -I /usr/include/eigen3/ showed_images2.cpp -o showed `pkg-config --cflags --libs opencv`
+```
