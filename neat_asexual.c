@@ -28,7 +28,7 @@ int age_importance = 2;
 int advance_in_fitness = 0;
 int generation_stop = 1200;
 float c1 = 0.1, c2 = 4.0, N=1;
-int tests_numbers = 2;
+int tests_numbers = 100;
 
 //-------------------------------------------------------------------------
 float structural_connections[2] = {0.6,0.90}; //aqui va a acumulado //hid-hid, ext-hid, ext-ext
@@ -52,14 +52,14 @@ int max_angle = 45;                 // en grados
 int number_input_images = 250;
 // int height = 480;                //cambiar abajo tambien el tamaño
 // int length = 640;
-int height = 4;             
-int length = 4;
-int number_inputs = 4*4*4;
-float color_propability = 0.7;
+int height = 2;             
+int length = 2;
+int number_inputs = 2*2*4;
+float color_propability = 0.8;
 int number_outputs = 2;
 // population 
-int max_generations = 2;
-int population = 10;
+int max_generations = 300;
+int population = 500;
 int number_offspring = 100;
 int zeros;
 
@@ -1609,9 +1609,9 @@ int main(){
     unsigned char (*inputs)[length][4] = malloc(height*length*4*sizeof(char));
     // int (*outputs)[length]= malloc(number_input_images*length*sizeof(int));
 
-    FILE *file_genomes = fopen("genome.txt","w");                   //first_population(), bucle while   
+    FILE *file_genomes = fopen("genome.txt","w");                   //first_population(), bucle while  
+    FILE *file_resume = fopen("resume.txt","w");                    // 
     FILE *file_evaluation = fopen("evaluation.txt","w");            //evaluate_network()
-    FILE *file_resume = fopen("resume.txt","w");                    //
     FILE *file_tests = fopen("tests.txt","w");                      //evaluate_fitness_of_all_species(), evaluate_false_fitness()
     FILE *file_offspring = fopen("offspring.txt","w");              //activar las 3 funciones print_offspring()
     FILE *file_inputs = fopen("inputs.txt","w");                    //bucle while, create_false_fitness()
@@ -1665,11 +1665,11 @@ int main(){
     free(inputs);
     // free(outputs);
 
+    fclose(file_genomes);
+    fclose(file_resume);
     fclose(file_inputs);
     fclose(file_offspring);
-    fclose(file_genomes);
     fclose(file_evaluation);
-    fclose(file_resume);
     fclose(file_tests);
 }
 
