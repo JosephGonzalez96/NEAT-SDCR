@@ -1,5 +1,5 @@
 ## NEAT implementation
-This code is an implementation of the NEAT algorithm proposed by Stanley [in his paper](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf). The original algorithm uses sexual reproduction  (**neat_sexual.c** file), this work proposes asexual reproduction (**neat_asexual.c** file) as a better alternative. The document is available on [this website](https://sites.google.com/site/degreethesislorenaguachi/2020-joseph-gonzalez-self-driving-mini-robot-using-neat-algorithm). 
+This code is an implementation of the NEAT algorithm proposed by Stanley [in his paper](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf). The original algorithm uses sexual reproduction  (**neat_sexual.c** file), this work proposes asexual reproduction (**neat_asexual.c** file) as a better alternative. The document that explains asexual reproduction and other innovations is available on [this website](https://sites.google.com/site/degreethesislorenaguachi/2020-joseph-gonzalez-self-driving-mini-robot-using-neat-algorithm). 
 
 
 You can compile the **neat_sexual.c** file using the command 
