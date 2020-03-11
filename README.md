@@ -14,4 +14,4 @@ After training, the genome.txt and the resume.txt files will be generated; these
 ```bash
 g++ -I /path/to/eigen/ -o computer side_computer.cpp -lbluetooth `pkg-config --cflags --libs opencv`
 ```
-**side_computer.cpp** program will send instructions of movements by bluetooth and the Arduino program  **side_robot.ino** will recieve this instructions and control the movement of the mini-roboy
+**side_computer.cpp** program will send instructions of movements by bluetooth and the Arduino program  **side_robot.ino** will recieve these instructions to control the movement of the mini-roboy
