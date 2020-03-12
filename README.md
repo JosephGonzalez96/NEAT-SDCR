@@ -10,7 +10,7 @@ and the **neat_asexual.c** file using the command
 ```bash
 gcc neat_asexual.c -o neat -lm
 ```
-After training, the genome.txt and the resume.txt files will be generated; these files show a summary of the best neural networks in each generation and their structures. The asexual model usually reaches an accuracy of 95% in 5 minutes; nevertheless, it is important to adjust the hyper-parameters *population* and *max_generations* to reach an accuracy of 100% if it is possible. After training, the neural network has to be adapted to solve problems in big images; this process is not always simple. The neural network has to be adapted and place in the **side_computer.cpp** file, after that, it is necessary to install *eigen*, *-lbluetooth* and *opencv*, compile the **side_computer.cpp** program using
+After training, the *genome.txt* and the *resume.txt* files will be generated; these files show a summary of the best neural networks in each generation and their structures. The asexual model usually reaches an accuracy of 95% in 5 minutes; nevertheless, it is important to adjust the hyper-parameters *population* and *max_generations* to reach an accuracy of 100% if it is possible. After training, the neural network has to be adapted to solve problems in big images; this process is not always simple. The neural network has to be adapted and place in the **side_computer.cpp** file, after that, it is necessary to install *eigen*, *-lbluetooth* and *opencv*, compile the **side_computer.cpp** program using
 ```bash
 g++ -I /path/to/eigen/ -o computer side_computer.cpp -lbluetooth `pkg-config --cflags --libs opencv`
 ```
